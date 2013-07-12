@@ -1,0 +1,52 @@
+
+#td_question
+{
+	font-size:130%;
+}
+
+#td_answer
+{
+	/*colspan:2;*/
+}
+
+#answer
+{
+	width: 90%;
+	font-size:110%;
+}
+
+.form_table .td_q
+{
+	text-align: center;
+}
+
+.page_links a
+{
+	margin-left: 5px;
+	margin-right:5px;
+	
+}
+
+.page_links strong
+{
+	font-size: 150%;
+	margin-left: 5px;
+	margin-right:5px;
+}
+
+.error
+{
+	color:red;
+	font-style:italic;
+	font-size: 90%;
+}
+
+[type=checkbox]
+ {
+ 	margin-right: 8px;
+ }
+ 
+ [type=radio]
+ {
+ 	margin-right: 8px;
+ }

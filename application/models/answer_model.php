@@ -1,0 +1,65 @@
+<?php
+
+class Answer_model extends CI_Model
+{
+	function array_to_string($array)
+	{
+		//$people = array("Peter" => "student", "Joe"=>"teacher", "Glenn"=>"11", "Cleveland"=>"44");
+		$string = "";
+		reset($array);
+		//$count = count($array);
+		list($key, $val) = each($array);
+		$string = $key."*".$val;
+
+		while (list($key, $val) = each($array))
+  		{
+  			$string = $string."|".$key."*".$val;
+		}
+		//$this->firephp->info($string);
+		return $string;
+	}
+	
+	function get_answerlist($type_id)
+	{
+		$table_name = "answer_table".$type_id;
+		$query = $this->db->query("SELECT * FROM $table_name");
+
+		if ($query->num_rows() > 0)
+		{
+			return $query->result();
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	function new_answer($type_id, $new_answer_insert_data)
+	{
+		$table_name = "answer_table".$type_id;
+		
+		$insert = $this->db->insert($table_name, $new_answer_insert_data);
+		$id = $this->db->insert_id();
+		//$this->firephp->info($id);
+		return $id;
+	}
+	
+	function num_to_str($num)
+	{
+		$d = $num / 26;
+		$r = $num % 26;
+
+		$r_r = chr($r+ord("A"));
+		//$this->firephp->info($r_r);
+		if($d < 1)
+		{
+			$d_d = '';
+		}
+		else
+		{
+			$d_d = chr($d+ord("A")-1);
+		}
+		//$this->firephp->info($d_d);
+		return $d_d.$r_r;
+	}
+}

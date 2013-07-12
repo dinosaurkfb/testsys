@@ -1,0 +1,32 @@
+.container
+{
+	width:500px;
+	background:#C2300B;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:200px;
+	padding-top:10px;
+}
+
+.icon
+{
+	float:left;
+}
+
+.msg
+{
+	font-size: 120%;
+	font-weight:bold;
+	float:left;
+	margin-left:5px;
+	margin-top:30px;
+}
+
+.clear:after
+{
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}

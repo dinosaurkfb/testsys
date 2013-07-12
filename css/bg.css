@@ -1,0 +1,16 @@
+input
+{
+	margin-right:5px;
+}
+
+#bg_table #q_td
+{
+	colspan: 2;
+}
+
+.error
+{
+	color:red;
+	font-style:italic;
+	font-size: 90%;
+}
